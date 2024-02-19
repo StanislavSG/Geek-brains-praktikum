@@ -1,36 +1,35 @@
-﻿// Напишите программу которая на вход принимает число и выдает его квадрат
+﻿/*Напишите программу, которая будет
+выдавать название дня недели по заданному номеру.
+3 -> Среда
+5 -> Пятница*/
+Console.Write("Введите целое число от 1 до 7: ");
+int number = int.Parse(Console.ReadLine());
 
-
-//Console.Write("Введи целое число: ");
-
-//int namber = int.Parse(Console.ReadLine());
-
-// Квадрат входного числа
-//int result = namber * namber;
-
-// Вывод результата
-//Console.WriteLine($"Квадрат входного числа: {result}");
-//---------------------------------------------------------------------------------------------------
-/*Задача №1. Напишите программу, которая на вход
-принимает два числа и проверяет, является ли первое
-число квадратом второго.
-a = 25, b = 5 -> да
-a = 2, b = 10 -> нет
-a = 9, b = -3 -> да
-a = -3 b = 9 -> нет*/
-
-Console.Write("Введи первое  число: ");
-int namber = int.Parse(Console.ReadLine());
-
-Console.Write("Введи второе число: ");
-int namber_2 = int.Parse(Console.ReadLine());
-
-int namber_3 =namber_2 * namber_2;
-if(namber == namber_3)
+switch(number)
 {
-    Console.WriteLine("Первое число является квадратом второго");
+    case(1):
+    Console.WriteLine("Понедельник");
+    break;
+    case(2):
+    Console.WriteLine("Вторник");
+    break;
+    case(3):
+    Console.WriteLine("Среда");
+    break;
+    case(4):
+    Console.WriteLine("Четверг");
+    break;
+    case(5):
+    Console.WriteLine("Пятница");
+    break;
+    case(6):
+    Console.WriteLine("Суббота");
+    break;
+    case(7):
+    Console.WriteLine("Воскресенье");
+    break;
+    default:
+    Console.WriteLine("Такого дня недели не существует");
+    break;
 }
-else
-{
-    Console.WriteLine("Первое число НЕ является квадратом второго");
-}
+
