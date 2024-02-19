@@ -1,35 +1,22 @@
-﻿/*Напишите программу, которая будет
-выдавать название дня недели по заданному номеру.
-3 -> Среда
-5 -> Пятница*/
-Console.Write("Введите целое число от 1 до 7: ");
-int number = int.Parse(Console.ReadLine());
+﻿//Console.Clear;
 
-switch(number)
+/*Напишите программу, которая принимает
+на вход трёхзначное число и на выходе показывает
+последнюю цифру этого числа.
+456 -> 6
+782 -> 2
+918 -> 8*/
+
+Console.Write("ВВедитецелое трехзначное число: ");
+double number = double.Parse(Console.ReadLine());
+if(99 < number && number<1000)
+
 {
-    case(1):
-    Console.WriteLine("Понедельник");
-    break;
-    case(2):
-    Console.WriteLine("Вторник");
-    break;
-    case(3):
-    Console.WriteLine("Среда");
-    break;
-    case(4):
-    Console.WriteLine("Четверг");
-    break;
-    case(5):
-    Console.WriteLine("Пятница");
-    break;
-    case(6):
-    Console.WriteLine("Суббота");
-    break;
-    case(7):
-    Console.WriteLine("Воскресенье");
-    break;
-    default:
-    Console.WriteLine("Такого дня недели не существует");
-    break;
-}
+    double number_1 = number % 10;
+    Console.WriteLine($"Последняя цифра этого числа равна: {number_1}");
 
+}
+else
+{
+Console.WriteLine("Введенное число не входит в диапазон");
+}
